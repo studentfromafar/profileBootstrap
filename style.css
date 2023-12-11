@@ -1,0 +1,246 @@
+/*Avatar Floating*/
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-10px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.avatar {
+  overflow: hidden;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+/*Avatar Floating*/
+
+/*Background Fade*/
+#bg-gradient {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(58, 74, 74, 1) 0%,
+    rgba(158, 141, 105, 1) 100%
+  );
+}
+
+#bg-main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 37, 38, 1) 0%,
+    rgba(65, 67, 69, 1) 100%
+  );
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#pfp {
+  transition: opacity 1s;
+}
+
+#smicons {
+  transition: opacity 1s;
+}
+
+#quote {
+  transition: opacity 1s;
+}
+/*Background Fade*/
+
+/*Scroll Animation*/
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(20%);
+  transition: all 1s;
+}
+.hiddenleft {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.showleft {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.bar {
+  width: 0; /* Start with a width of 0 */
+}
+/*Scroll Animation*/
+
+/*Social Media Icons*/
+.smicon-wrapper {
+  justify-content: center;
+  margin-top: 10px;
+}
+.smicon-wrapper .smicon-button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 20px;
+  background: rgb(210, 210, 210);
+  overflow: hidden;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 1px 5px 10px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-out;
+}
+
+.smicon-wrapper .smicon-button:hover {
+  width: 200px;
+}
+
+.smicon-wrapper .smicon-button .smicon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.smicon-wrapper .smicon-button:nth-child(1):hover .smicon {
+  background: #3b5998;
+}
+
+.smicon-wrapper .smicon-button:nth-child(2):hover .smicon {
+  background: #767676;
+}
+
+.smicon-wrapper .smicon-button:nth-child(3):hover .smicon {
+  background: #0072b1;
+}
+
+.smicon-wrapper .smicon-button .smicon i {
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.smicon-wrapper .smicon-button:hover .smicon i {
+  color: rgb(0, 0, 0);
+}
+
+.smicon-wrapper .smicon-button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.smicon-wrapper .smicon-button:nth-child(1) span {
+  color: #3b5998;
+}
+
+.smicon-wrapper .smicon-button:nth-child(2) span {
+  color: #2b3137;
+}
+
+.smicon-wrapper .smicon-button:nth-child(3) span {
+  color: #0e76a8;
+}
+/*Social Media Icons*/
+
+/*Social Media Icons II*/
+.one {
+  display: flex;
+  position: absolute;
+  left: 135px;
+}
+
+.one .two {
+  list-style: none;
+}
+
+.one .two .three {
+  width: 80px;
+  height: 80px;
+  background-color: #ebeaea;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #ebeaea;
+  z-index: 1;
+}
+
+.one .two .three .four {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.one .two .three:hover .four {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.one .two .three:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.one .two .three:hover:before {
+  top: 0;
+}
+
+.one .two:nth-child(1) .three:before {
+  background: #3b5999;
+}
+
+.one .two:nth-child(2) .three:before {
+  background: #2b3137;
+}
+
+.one .two:nth-child(3) .three:before {
+  background: #0e76a8;
+}
+
+/*Social Media Icons II*/
+
+/*Size*/
+
+/*Small Screens*/
+@media (min-width: 300px) and (max-width: 475px) {
+  .one {
+    left: 10px;
+  }
+}
+/*Size*/

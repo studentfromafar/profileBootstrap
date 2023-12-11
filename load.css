@@ -1,0 +1,39 @@
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fade-out-animation {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  position: absolute;
+  margin: -35px 0 0 -35px;
+  border: 7px solid hsl(25, 100%, 65%);
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  left: 50%;
+  top: 50%;
+  animation: loader-spin 2s linear infinite reverse;
+  filter: url(#goo);
+  box-shadow: 0 0 0 1px hsl(25, 100%, 65%) inset;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  animation: loader-spin 2s cubic-bezier(0.59, 0.25, 0.4, 0.69) infinite;
+  background: hsl(25, 100%, 65%);
+  transform-origin: top center;
+  border-radius: 50%;
+  width: 150%;
+  height: 150%;
+  top: 50%;
+  left: -12.5%;
+} /*# sourceMappingURL=load.css.map */
